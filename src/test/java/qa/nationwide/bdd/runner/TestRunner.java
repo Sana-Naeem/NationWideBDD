@@ -19,7 +19,7 @@ import io.cucumber.junit.CucumberOptions;
 //By default monochrome is falseS
 //dryRun- If you put as true it does not execute anything it just makes sure all the steps are defined. (by default it is false)
 //Plug-ins- used for reporting purposes like- json report, xml report and html report)
-public class BusinessQuoteTestRunner {
+public class TestRunner {
 
 }
   
