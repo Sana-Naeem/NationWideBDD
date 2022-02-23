@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="18.915">
-<testcase classname="Business Quote Validation" name="Quote is for starting a new business." time="18.368">
-<system-out><![CDATA[Given user is in the Libery Mutual Page.....................................passed
-When user clicks on the drop down menu bar in homepage......................passed
-Then a drop down menu with multiple categories will appear..................passed
-]]></system-out>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="25.765">
+<testcase classname="Business Quote Validation" name="Quote is for starting a new business." time="25.2">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given user is in the Libery Mutual Page.....................................passed
+Given the title of the page is 'Insurance and Financial Services Company – Nationwide'.passed
+When user clicks on the drop down menu bar in homepage......................undefined
+Then a drop down menu with multiple categories will appear..................skipped
+]]></failure>
 </testcase>
 </testsuite>
