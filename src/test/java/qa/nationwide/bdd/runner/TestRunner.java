@@ -6,11 +6,9 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"features"}, 
-							glue = {"qa.nationwide.bdd.steps"}, 
-							monochrome = true, 
-							dryRun = false, 
-							plugin = {"json:target/jsonReport.json", "junit:target/xmlReport.xml", "html:target/htmlReport.html" })
+@CucumberOptions(features = { "features" }, glue = {
+		"qa.nationwide.bdd.steps" }, monochrome = true, dryRun = false, plugin = { "json:target/jsonReport.json",
+				"junit:target/xmlReport.xml", "html:target/htmlReport.html" })
 //Notes to self:
 //features is our features class which contains the undefined steps
 //glue is our step definitions class 

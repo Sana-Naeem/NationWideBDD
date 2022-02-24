@@ -2,6 +2,7 @@ package qa.nationwide.bdd.setup;
 
 import java.time.Duration;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -9,13 +10,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import qa.nationwide.bdd.methods.CommonMethods;
 import qa.nationwide.bdd.objects.MainPage_objects;
-public class BaseClass{
-	
+
+public class BaseClass {
+
 	public static WebDriver driver;
 	public static WebDriverWait wait;
 	public static CommonMethods commonMethods;
 	public static MainPage_objects mainPage_objects;
-	
+	public static JavascriptExecutor jsExecutor;
+
 	public static void initDriver() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
@@ -27,9 +30,10 @@ public class BaseClass{
 		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		initClasses();
 	}
-	
+
 	private static void initClasses() {
 		commonMethods = new CommonMethods();
 		mainPage_objects = new MainPage_objects(driver);
+		jsExecutor = (JavascriptExecutor) driver;
 	}
 }

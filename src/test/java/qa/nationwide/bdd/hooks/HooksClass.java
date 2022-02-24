@@ -11,9 +11,9 @@ public class HooksClass extends BaseClass {
 	public void initiating() {
 		JavaLogger.log("Initiating BDD Tests");
 	}
-	
+
 	@After
 	public void tearup() {
-	BaseClass.driver.quit();
+		// BaseClass.driver.quit();
 	}
 }
